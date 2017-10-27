@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;jvmgo&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../takung_3.5.1_20171016_dev" />
+      <root url="file://$PROJECT_DIR$/../go-demo" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../takung_3.5.1_20171016_dev" />
+      <root url="file://$PROJECT_DIR$/../go-demo" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>
