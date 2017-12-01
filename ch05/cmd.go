@@ -1,12 +1,12 @@
-package main
+package ch05
 
 import "flag"
 import "fmt"
 import "os"
 import (
-	"jvmgo/ch02/classpath"
+	"jvmgo/ch05/classpath"
 	"strings"
-	"jvmgo/ch03/classfile"
+	"jvmgo/ch05/classfile"
 )
 type Cmd struct {
 	helpFlag bool
@@ -49,6 +49,13 @@ func startJVM(cmd *Cmd){
 		cp,cmd.class,cmd.args)
 	className := strings.Replace(cmd.class,".","/",-1)
 	cf := loadClass(className,cp)
+	mainMethod :=getMainMethod(cf)
+	if mainMethod !=nil{
+		interpret(mainMethod)
+	} else {
+		fmt.Printf("Main method not found in class %s\n",cmd.class)
+	}
+
 	fmt.Println(cmd.class)
 	printClassInfo(cf)
 	classData,_,err := cp.ReadClass(className)
@@ -65,6 +72,9 @@ func loadClass(className string,cp *classpath.Classpath) *classfile.ClassFile{
 		panic(err)
 	}
 	cf,err := classfile.Parse(classData)
+	if err !=nil {
+		panic(err)
+	}
 	return cf
 
 }
@@ -83,5 +93,13 @@ func printClassInfo(cf *classfile.ClassFile)  {
 	for _,m := range cf.Methods(){
 		fmt.Printf("%s\n",m.Name())
 	}
+}
+func getMainMethod(cf *classfile.ClassFile) *classfile.MemberInfo{
+	for _,m:=range cf.Methods(){
+		if m.Name() =="main" && m.Descriptor() =="([LJava/lang/String;)V"{
+			return m
+		}
+	}
+	return nil
 }
 

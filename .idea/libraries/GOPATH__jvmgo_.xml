@@ -1,13 +1,21 @@
 <component name="libraryTable">
   <library name="GOPATH &lt;jvmgo&gt;">
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/../takung_3.5.6_20171106_dev" />
       <root url="file://$PROJECT_DIR$/../takung_3.5.1_20171016_dev" />
+      <root url="file://$PROJECT_DIR$/../EthereumJs" />
       <root url="file://$PROJECT_DIR$/../go-demo" />
+      <root url="file://$PROJECT_DIR$/../Ethereum" />
+      <root url="file://$PROJECT_DIR$/../websocket" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/../takung_3.5.6_20171106_dev" />
       <root url="file://$PROJECT_DIR$/../takung_3.5.1_20171016_dev" />
+      <root url="file://$PROJECT_DIR$/../EthereumJs" />
       <root url="file://$PROJECT_DIR$/../go-demo" />
+      <root url="file://$PROJECT_DIR$/../Ethereum" />
+      <root url="file://$PROJECT_DIR$/../websocket" />
     </SOURCES>
     <excluded>
       <root url="file://$PROJECT_DIR$" />

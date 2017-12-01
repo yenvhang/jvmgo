@@ -4,9 +4,9 @@ import "flag"
 import "fmt"
 import "os"
 import (
-	"jvmgo/ch02/classpath"
+	"jvmgo/ch04/classpath"
 	"strings"
-	"jvmgo/ch03/classfile"
+	"jvmgo/ch04/classfile"
 )
 type Cmd struct {
 	helpFlag bool
